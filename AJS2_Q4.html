@@ -1,58 +1,78 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-<title> Assign4 </title>
-<!-- Create two constructor functions - person and student. Create a property for person. Inherit the property of the function person 
-into student. Then change the property in student function.-->
-</head>
-
-<body>
-	<script type="text/javascript">
-		function Person(lastName, firstName){ 
-		  this.lastName = lastName; 
-		  this.firstName = firstName; 
-		}
-		
-		Person.prototype.name=function(){
-			alert("Name of person is"+ this.firstName + " " + this.lastName);
-		}
-		var PersonOb = new Person("Aggarwal","Kriti");
-				
-		function student(){
-		
-		}
-		student.prototype=PersonOb;
-		student.prototype.edu = "B.Tech" ;
-		
-		student.prototype.changename = function(){
-			var a=prompt("Enter first name","");
-			var b=prompt("Enter last name","" );
-			this.firstName=a;
-			this.lastName=b;
-		}
-		student.prototype.display=function(){
-			document.write("First name : " + this.firstName + "<br>");
-			document.write("Last Name : " + this.lastName + "<br>");
-			document.write("Education : " + this.edu + "<br>");
-			
-			var d=prompt("Do you want to change name ? Press y for yes and n for no","");
-			if(d === "y"){
-				this.changename();
-				this.display();
-			}else if(d=="n"){
-				
-			} else {
-				document.write("Enter valid option" + "<br>");
-				this.display();
-			}
-			document.write("<br>");
-		}
-		var student1= new student();
-		student1.display();
-		
-		
-	</script>
+	<title>Advance Javascript-Q4</title>
 	
-</body>
+</head>
+<body>
+<script type="text/javascript">
+		function person(name,city,collegename)
+		{
+			var a=prompt("Enter name","");
+			var b=prompt("Enter city","" );
+			var c = prompt("collegename","" );
+			this.name = a;
+			this.city	= b;
+			this.collegename = c;
+			document.write("name : " + this.name + "<br>");
+      		document.write("city : " + this.city + "<br>");
+      		document.write("collegename : " + this.collegename + "<br>");
+            
+            
+		}
+		var v=new person();
 
+		function student(){
+    
+    }
+   student.prototype=v;
+
+    student.prototype.change = function(){
+      var e=prompt("Enter name","");
+      //document.write("name" +e)
+      var f=prompt("Enter city","" );
+      var g = prompt("collegename","" );
+
+      this.name=e;
+      this.city=f;
+      	this.collegename=g;
+     
+      
+    }
+    student.prototype.display=function(){
+
+      document.write("<br>Name : " + this.name + "<br>");
+      document.write("City : " + this.city + "<br>");
+      document.write("collegename : " + this.collegename+ "<br>");
+      
+      var resp=prompt("Do you want to change the details?(y/n)","");
+      if(resp === "y"){
+        this.change();
+        this.display();
+      }else if(resp=="n"){
+      } else {
+        document.write("<br> <br>Invalid" + "<br>");
+       
+
+      }
+      document.write("<br>");
+    }
+    var student1= new student();
+
+    function callme()
+    {
+
+    
+   	
+    student1.display();
+      
+      }
+  
+	</script>
+<br><br><br><br>
+
+     <button  onclick="callme()" "> Click to Display inherited details and Edit the details</button>
+
+
+</body>
 </html>
