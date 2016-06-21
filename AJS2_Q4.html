@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<title> Assign4 </title>
+<!-- Create two constructor functions - person and student. Create a property for person. Inherit the property of the function person 
+into student. Then change the property in student function.-->
+</head>
+
+<body>
+	<script type="text/javascript">
+		function Person(lastName, firstName){ 
+		  this.lastName = lastName; 
+		  this.firstName = firstName; 
+		}
+		
+		Person.prototype.name=function(){
+			alert("Name of person is"+ this.firstName + " " + this.lastName);
+		}
+		var PersonOb = new Person("Aggarwal","Kriti");
+				
+		function student(){
+		
+		}
+		student.prototype=PersonOb;
+		student.prototype.edu = "B.Tech" ;
+		
+		student.prototype.changename = function(){
+			var a=prompt("Enter first name","");
+			var b=prompt("Enter last name","" );
+			this.firstName=a;
+			this.lastName=b;
+		}
+		student.prototype.display=function(){
+			document.write("First name : " + this.firstName + "<br>");
+			document.write("Last Name : " + this.lastName + "<br>");
+			document.write("Education : " + this.edu + "<br>");
+			
+			var d=prompt("Do you want to change name ? Press y for yes and n for no","");
+			if(d === "y"){
+				this.changename();
+				this.display();
+			}else if(d=="n"){
+				
+			} else {
+				document.write("Enter valid option" + "<br>");
+				this.display();
+			}
+			document.write("<br>");
+		}
+		var student1= new student();
+		student1.display();
+		
+		
+	</script>
+	
+</body>
+
+</html>
