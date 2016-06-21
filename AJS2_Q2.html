@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	(function(){
+						var a=prompt("Enter the value of first variable","");
+						var b=prompt("Enter the value of second variable","");
+						//document.getElementById("main").innerHTML=("Value of var1= " + a + "<br>" + "Value of var2= " + b + "<br>");
+						function addition(a,b)
+						{	//document.write("Addition")
+							this.func_add=parseInt(a)+parseInt(b);
+							return func_add;
+						}
+						function subtract(a,b)
+						{	//document.write("Subtraction")
+							this.func_sub=a-b;
+							return func_sub;
+						}
+						function multiply(a,b)
+						{   // document.write("Multiplication")
+							this.func_mul=a*b;
+							return func_mul;
+						}
+						function divide(a,b)
+						{	//document.write("Divide")
+							this.func_div=a/b;
+							return func_div;
+						}
+						alert("Addition :  " + addition(a,b));
+						alert("Subtraction : " " + subtract(a,b));
+						alert("Multiplication : " + multiply(a,b));
+						alert("Division : " + divide(a,b));
+		})();
+</script>
+<body onload="">
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<title> Assign3 </title>
+<!-- Create an Application (using OOP) in JavaScript that records the details of all kinds of Vehicles. -->
+</head>
+
+<body>
+	<script type="text/javascript">
+				
+		function Vehicle(){
+			var make=prompt("Enter the make of vehicle" );
+			this.make=make;
+			var year=prompt("Enter the year of vehicle" );
+			this.year=year;
+			var model=prompt("Enter the model of vehicle" );
+			this.model=model;
+			var number=prompt("Enter the number of vehicle" );
+			this.number=number;
+			var color=prompt("Enter the color of vehicle" );
+			this.color=color;
+
+			//function display(){
+				//document.write(" Make of vehicle is : " + make + "<br>");
+				//document.write(" Year of vehicle is : " + year + "<br>");
+				//document.write(" Model of vehicle is : " + model + "<br>");
+				//document.write(" Number of vehicle is : " +  number + "<br>");
+				//document.write(" Color of vehicle is : " +  color + "<br>");
+			//}
+			//display(this.make,this.year,this.model,this.number,this.color);
+		}
+		function obj(){
+			var v=new Vehicle();			
+			document.write("make : " + v.make);
+			document.write("model : " + v.year);
+			document.write("vehicle number " + v.number);
+			document.write("vehicle color" + v.color);
+		}
+				
+	</script>
+	<button onclick="obj()" position="fixed"> Enter details of your vehicle </button>
+	
+</body>
+
+</html>
