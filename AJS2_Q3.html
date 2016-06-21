@@ -1,8 +1,7 @@
 <html>
 
 <head>
-<title> Assign3 </title>
-<!-- Create an Application (using OOP) in JavaScript that records the details of all kinds of Vehicles. -->
+<title> Assign3-Q3 </title>
 </head>
 
 <body>
@@ -20,25 +19,17 @@
 			var color=prompt("Enter the color of vehicle" );
 			this.color=color;
 
-			//function display(){
-				//document.write(" Make of vehicle is : " + make + "<br>");
-				//document.write(" Year of vehicle is : " + year + "<br>");
-				//document.write(" Model of vehicle is : " + model + "<br>");
-				//document.write(" Number of vehicle is : " +  number + "<br>");
-				//document.write(" Color of vehicle is : " +  color + "<br>");
-			//}
-			//display(this.make,this.year,this.model,this.number,this.color);
 		}
-		function obj(){
+		function callme(){
 			var v=new Vehicle();			
-			document.write("make : " + v.make);
-			document.write("model : " + v.year);
-			document.write("vehicle number " + v.number);
-			document.write("vehicle color" + v.color);
+			document.write("make : " + v.make + "<br>");
+			document.write("model : " + v.year+ "<br>");
+			document.write("vehicle number " + v.number+ "<br>");
+			document.write("vehicle color" + v.color+ "<br>");
 		}
 				
 	</script>
-	<button onclick="obj()" position="fixed"> Enter details of your vehicle </button>
+	<button onclick="callme()" "> Enter The Details</button>
 	
 </body>
 
